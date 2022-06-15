@@ -78,6 +78,18 @@ services:
             - '${FORWARD_MAILHOG_DASHBOARD_PORT:-8025}:8025'
         networks:
             - sail
+    myadmin:
+        image: 'phpmyadmin:latest'
+        ports:
+            - 8080:80
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+        links:
+            - "mysql:db"
+        depends_on:
+            - mysql
+        networks:
+            - sail
     selenium:
         image: 'selenium/standalone-chrome'
         volumes:
