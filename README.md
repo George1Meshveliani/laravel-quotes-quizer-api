@@ -7,3 +7,6 @@
 6. Run `php artisan migrate`
 7. Run `php artisan serve`
 8. Go to link http://localhost:8000
+
+Before the installation make sure that other services like apache and mysql are stopped. 
+You can run `sudo service apache2 stop` and `sudo service apache2 mysql`
