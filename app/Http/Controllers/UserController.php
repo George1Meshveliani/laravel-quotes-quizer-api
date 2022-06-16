@@ -123,6 +123,10 @@ class UserController extends Controller
         }
     }
 
+    /**
+     * @param $email
+     * @return mixed
+     */
     public function userDetail($email) {
         $user = [];
         if($email != '') {
@@ -131,5 +135,14 @@ class UserController extends Controller
         }
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    function allUsers() {
+        $users = User::all();
+        return response()->json([
+           'data' => $users,
+        ]);
+    }
 }
 
