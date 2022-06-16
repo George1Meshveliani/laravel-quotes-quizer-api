@@ -32,4 +32,4 @@ Route::post('user/{email}', [UserController::class, 'userDetail']);
 
 // Endpoint: http://{url}/api/users
 // In our example http://localhost:8000/api/users
-Route::post('users', [UserController::class, 'allUsers']);
+Route::get('users', [UserController::class, 'allUsers']);
