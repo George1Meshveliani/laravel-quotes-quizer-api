@@ -136,6 +136,8 @@ class UserController extends Controller
     }
 
     /**
+     * Get all users data
+     *
      * @return \Illuminate\Http\JsonResponse
      */
     function allUsers() {
