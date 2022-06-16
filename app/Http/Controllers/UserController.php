@@ -140,7 +140,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    function allUsers() {
+    public function allUsers() {
         $users = User::all();
         return response()->json([
            'data' => $users,
