@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\QuoteController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,3 +34,7 @@ Route::post('user/{email}', [UserController::class, 'userDetail']);
 // Endpoint: http://{url}/api/users
 // In our example http://localhost:8000/api/users
 Route::get('users', [UserController::class, 'allUsers']);
+
+// Endpoint: http://{url}/api/quotes
+// In our example http://localhost:8000/api/quotes
+Route::get('quotes', [QuoteController::class, 'fetchQuotes']);
