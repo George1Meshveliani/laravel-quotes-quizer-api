@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "bfc9bb2a-1399-464e-9c23-6ed6512cdf55",
+		"name": "Quizer public",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{api}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{api}}",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Qutes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{api}}/quotes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{api}}",
+						"quotes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

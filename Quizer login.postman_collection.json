@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "8aa0dfdb-d0f7-448a-92f1-209cd3b6bf06",
+		"name": "Quizer login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();",
+							"",
+							"pm.environment.set(\"access_token\", jsonData.access_token);",
+							"pm.environment.set(\"refresh_token\", jsonData.refresh_token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/{{api}}/user-login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{api}}",
+						"user-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{api}}/user/test1@gmail.com",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{api}}",
+						"user",
+						"test1@gmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

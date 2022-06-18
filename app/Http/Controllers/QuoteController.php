@@ -19,11 +19,12 @@ class QuoteController extends Controller
         $quotes = Http::get($url)->json();
 
         foreach ($quotes as $quote) {
-            if (!empty($quote['text']) && !empty($quote['author']))
-            Quotes::create([
-                'text' => $quote['text'],
-                'author' => $quote['author'],
-            ])->save();
+            if (!empty($quote['text']) && !empty($quote['author'])) {
+                Quotes::create([
+                    'text' => $quote['text'],
+                    'author' => $quote['author'],
+                ])->save();
+            }
         }
 
         return response()->json([

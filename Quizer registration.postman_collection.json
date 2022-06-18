@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "eda60068-3f0c-46a8-915f-67911a80142a",
+		"name": "Quizer registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User registrations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "George2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "55555",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/{{api}}/user-signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{api}}",
+						"user-signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
