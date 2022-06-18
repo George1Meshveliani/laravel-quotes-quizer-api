@@ -23,7 +23,7 @@ class QuoteController extends Controller
                 Quotes::create([
                     'text' => $quote['text'],
                     'author' => $quote['author'],
-                ])->save();
+                ]);
             }
         }
 
