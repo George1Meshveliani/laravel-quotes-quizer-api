@@ -40,6 +40,25 @@
 				}
 			},
 			"response": []
-		}
+		},
+        {
+            "name": "User email",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/{{api}}/user/test1@gmail.com",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "{{api}}",
+                        "user",
+                        "test1@gmail.com"
+                    ]
+                }
+            },
+            "response": []
+        }
 	]
 }

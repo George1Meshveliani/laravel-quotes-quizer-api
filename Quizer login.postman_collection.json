@@ -62,25 +62,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "User email",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/{{api}}/user/test1@gmail.com",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"{{api}}",
-						"user",
-						"test1@gmail.com"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }
