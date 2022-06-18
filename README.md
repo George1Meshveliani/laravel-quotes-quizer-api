@@ -8,10 +8,10 @@
 7. Run `php artisan serve`
 8. Go to link http://localhost:8000
 
-To launch other services like e.g `phpmyadmin` run `./vendor/bin/sail up` or `docker-compose up`.
+To launch other services like e.g `phpmyadmin` and get all working endpoints run `./vendor/bin/sail up` or `docker-compose up`.
 
 Before the installation make sure that other services like apache and mysql are stopped.
-You can run `sudo service apache2 stop` and `sudo service apache2 mysql`.
+You can run `sudo service apache2 stop` and `sudo service mysql stop`.
 
 #### Endpoints:
 
