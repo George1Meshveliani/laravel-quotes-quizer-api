@@ -37,4 +37,4 @@ Route::get('users', [UserController::class, 'allUsers']);
 
 // Endpoint: http://{url}/api/quotes
 // In our example http://localhost:8000/api/quotes
-Route::get('quotes', [QuoteController::class, 'fetchQuotes']);
+Route::get('quotes', [\Database\Seeders\QuotesTableSeeder::class, 'run']);
